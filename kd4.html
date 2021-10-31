@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c679a6b0d3.js" crossorigin="anonymous"></script>
+    <style>
+        /*font*/
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+
+        /*메인 화면 설정*/
+        #back {
+
+            background-image: url(../kda/이미지/배경.png);
+            background-blend-mode: luminosity;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+
+        /*head+nav*/
+        #head {
+
+            padding-bottom: 18px;
+            display: flex;
+            width: 100%;
+            height: 60px;
+            background-color: white;
+
+        }
+
+
+        /*logo*/
+        #logo {
+            margin-top: 2px;
+            margin-left: 223px;
+            font-family: 'Sacramento', cursive;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            color: rgba(173, 0, 255, 1);
+        }
+
+        /*검색창*/
+        .searchbox {
+            margin-left: 36px;
+            margin-top: 15px;
+            height: 40px;
+            width: 450px;
+            border: 0.5px solid #989898;
+            background: #ffffffff;
+            border-radius: 4px;
+
+
+
+        }
+
+        /*검색박스*/
+        #search:-ms-input-placeholder {
+
+            color: rgba(196, 196, 196, 1);
+        }
+
+        #search {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin-left: 18px;
+            font-size: 16px;
+            width: 325px;
+            padding: 8px;
+            border: 0px;
+            outline: none;
+            float: left;
+        }
+
+        /*검색 클릭버튼*/
+        #searchbutton {
+
+            width: 38px;
+            height: 100%;
+            border: 0px;
+            background-color: rgba(209, 151, 255, 1);
+            outline: none;
+            float: right;
+            color: #ffffffff;
+
+        }
+
+        /*검색 클릭버튼 아이콘*/
+        #searchicon {
+            width: 15px;
+        }
+
+        /*회원가입*/
+        #member {
+            margin-top: 15px;
+            margin-left: 370px;
+            position: relative;
+            border: 0px;
+            outline: none;
+            background-color: white;
+        }
+
+        /*회원가입 버큰 아이콘 이미지*/
+        #joinimg {
+            width: 30px;
+        }
+
+
+
+
+        /*main*/
+        #kd4-hd-box {
+            background-image: url(../kda/이미지/배경3.png);
+            background-size: cover;
+            text-align: center;
+            padding: 10%;
+            background-color: blueviolet;
+            line-height: 25px;
+            color: aliceblue
+        }
+
+        #head-title {
+
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 4rem;
+        }
+
+        #head-sub-title {
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2rem;
+            /* word-spacing: 1.2rem; */
+        }
+
+
+        #kd4-at {
+            margin-top: 0px;
+            background-color: rgba(196, 196, 196, 1);
+        }
+
+        #imgbox {
+            margin: auto 0;
+        }
+
+
+
+
+        /* .box {
+
+            margin: 2%;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color: white;
+            width: 248px;
+            height: 300px;
+            top: 1px;
+            
+        } */
+
+        #plus {
+            padding-top:30px ;
+            padding-bottom: 129px;
+            text-align: center;
+
+        }
+
+        #plus-button {
+            font-size: 18px;
+        }
+
+        #article-sub-title {
+            font-size: 40px;
+            padding: 5%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #kd4-footer{
+            background-color: black;
+            color: white;
+            padding:2%;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #kd4-footer-button{
+            margin-right: 200px;
+            display: flex;
+            /* padding: 5%; */
+        }
+        #kd4-footer-button div{
+            margin-left: 190px;
+            padding-top: 10px;
+            padding:0px auto;
+        }
+        #kd4-footer-button div:hover{
+            color:yellowgreen;
+        }
+        #kd4-footer-title{
+            font-family: 'Sacramento', cursive;
+            font-size: 30px;
+            margin-left: 180px;
+        }
+        .search{
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header id="head">
+            <h1 id="logo">ccheongso</h1>
+            <div class="searchbox">
+                <input type="text" placeholder="검색해라!" id="search">
+                <button id="searchbutton"><img id="searchicon"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMDUgNTEyLjAwNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNTA1Ljc0OSw0NzUuNTg3bC0xNDUuNi0xNDUuNmMyOC4yMDMtMzQuODM3LDQ1LjE4NC03OS4xMDQsNDUuMTg0LTEyNy4zMTdjMC0xMTEuNzQ0LTkwLjkyMy0yMDIuNjY3LTIwMi42NjctMjAyLjY2NyAgICBTMCw5MC45MjUsMCwyMDIuNjY5czkwLjkyMywyMDIuNjY3LDIwMi42NjcsMjAyLjY2N2M0OC4yMTMsMCw5Mi40OC0xNi45ODEsMTI3LjMxNy00NS4xODRsMTQ1LjYsMTQ1LjYgICAgYzQuMTYsNC4xNiw5LjYyMSw2LjI1MSwxNS4wODMsNi4yNTFzMTAuOTIzLTIuMDkxLDE1LjA4My02LjI1MUM1MTQuMDkxLDQ5Ny40MTEsNTE0LjA5MSw0ODMuOTI4LDUwNS43NDksNDc1LjU4N3ogICAgIE0yMDIuNjY3LDM2Mi42NjljLTg4LjIzNSwwLTE2MC03MS43NjUtMTYwLTE2MHM3MS43NjUtMTYwLDE2MC0xNjBzMTYwLDcxLjc2NSwxNjAsMTYwUzI5MC45MDEsMzYyLjY2OSwyMDIuNjY3LDM2Mi42Njl6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" /></button>
+            </div>
+            <button id="member"><img id="joinimg"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDQ1LjAwMDAwMDAwMDAwMDAzLDApIj48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0yMTAuMzUxNTYyIDI0Ni42MzI4MTJjMzMuODgyODEzIDAgNjMuMjE4NzUtMTIuMTUyMzQzIDg3LjE5NTMxMy0zNi4xMjg5MDYgMjMuOTY4NzUtMjMuOTcyNjU2IDM2LjEyNS01My4zMDQ2ODcgMzYuMTI1LTg3LjE5MTQwNiAwLTMzLjg3NS0xMi4xNTIzNDQtNjMuMjEwOTM4LTM2LjEyODkwNi04Ny4xOTE0MDYtMjMuOTc2NTYzLTIzLjk2ODc1LTUzLjMxMjUtMzYuMTIxMDk0LTg3LjE5MTQwNy0zNi4xMjEwOTQtMzMuODg2NzE4IDAtNjMuMjE4NzUgMTIuMTUyMzQ0LTg3LjE5MTQwNiAzNi4xMjVzLTM2LjEyODkwNiA1My4zMDg1OTQtMzYuMTI4OTA2IDg3LjE4NzVjMCAzMy44ODY3MTkgMTIuMTU2MjUgNjMuMjIyNjU2IDM2LjEyODkwNiA4Ny4xOTUzMTIgMjMuOTgwNDY5IDIzLjk2ODc1IDUzLjMxNjQwNiAzNi4xMjUgODcuMTkxNDA2IDM2LjEyNXptLTY1Ljk3MjY1Ni0xODkuMjkyOTY4YzE4LjM5NDUzMi0xOC4zOTQ1MzIgMzkuOTcyNjU2LTI3LjMzNTkzOCA2NS45NzI2NTYtMjcuMzM1OTM4IDI1Ljk5NjA5NCAwIDQ3LjU3ODEyNiA4Ljk0MTQwNiA2NS45NzY1NjMgMjcuMzM1OTM4IDE4LjM5NDUzMSAxOC4zOTg0MzcgMjcuMzM5ODQ0IDM5Ljk4MDQ2OCAyNy4zMzk4NDQgNjUuOTcyNjU2IDAgMjYtOC45NDUzMTMgNDcuNTc4MTI1LTI3LjMzOTg0NCA2NS45NzY1NjItMTguMzk4NDM3IDE4LjM5ODQzOC0zOS45ODA0NjkgMjcuMzM5ODQ0LTY1Ljk3NjU2MyAyNy4zMzk4NDQtMjUuOTkyMTg3IDAtNDcuNTcwMzEyLTguOTQ1MzEyLTY1Ljk3MjY1Ni0yNy4zMzk4NDQtMTguMzk4NDM3LTE4LjM5NDUzMS0yNy4zNDM3NS0zOS45NzY1NjItMjcuMzQzNzUtNjUuOTc2NTYyIDAtMjUuOTkyMTg4IDguOTQ1MzEzLTQ3LjU3NDIxOSAyNy4zNDM3NS02NS45NzI2NTZ6bTAgMCIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTQyNi4xMjg5MDYgMzkzLjcwMzEyNWMtLjY5MTQwNi05Ljk3NjU2My0yLjA4OTg0NC0yMC44NTkzNzUtNC4xNDg0MzctMzIuMzUxNTYzLTIuMDc4MTI1LTExLjU3ODEyNC00Ljc1MzkwNy0yMi41MjM0MzctNy45NTcwMzEtMzIuNTI3MzQzLTMuMzEyNS0xMC4zMzk4NDQtNy44MDg1OTQtMjAuNTUwNzgxLTEzLjM3NS0zMC4zMzU5MzgtNS43Njk1MzItMTAuMTU2MjUtMTIuNTUwNzgyLTE5LTIwLjE2MDE1Ny0yNi4yNzczNDMtNy45NTcwMzEtNy42MTMyODItMTcuNjk5MjE5LTEzLjczNDM3Ni0yOC45NjQ4NDMtMTguMTk5MjE5LTExLjIyNjU2My00LjQ0MTQwNy0yMy42Njc5NjktNi42OTE0MDctMzYuOTc2NTYzLTYuNjkxNDA3LTUuMjI2NTYzIDAtMTAuMjgxMjUgMi4xNDQ1MzItMjAuMDQyOTY5IDguNS02LjAwNzgxMiAzLjkxNzk2OS0xMy4wMzUxNTYgOC40NDkyMTktMjAuODc4OTA2IDEzLjQ2MDkzOC02LjcwNzAzMSA0LjI3MzQzOC0xNS43OTI5NjkgOC4yNzczNDQtMjcuMDE1NjI1IDExLjkwMjM0NC0xMC45NDkyMTkgMy41NDI5NjgtMjIuMDY2NDA2IDUuMzM5ODQ0LTMzLjA0Mjk2OSA1LjMzOTg0NC0xMC45Njg3NSAwLTIyLjA4NTkzNy0xLjc5Njg3Ni0zMy4wNDI5NjgtNS4zMzk4NDQtMTEuMjEwOTM4LTMuNjIxMDk0LTIwLjMwMDc4Mi03LjYyNS0yNi45OTYwOTQtMTEuODk4NDM4LTcuNzY5NTMyLTQuOTY0ODQ0LTE0LjgwMDc4Mi05LjQ5NjA5NC0yMC44OTg0MzgtMTMuNDY4NzUtOS43NTM5MDYtNi4zNTU0NjgtMTQuODA4NTk0LTguNS0yMC4wMzUxNTYtOC41LTEzLjMxMjUgMC0yNS43NSAyLjI1MzkwNi0zNi45NzI2NTYgNi42OTkyMTktMTEuMjU3ODEzIDQuNDU3MDMxLTIxLjAwMzkwNiAxMC41NzgxMjUtMjguOTY4NzUgMTguMTk5MjE5LTcuNjA5Mzc1IDcuMjgxMjUtMTQuMzkwNjI1IDE2LjEyMTA5NC0yMC4xNTYyNSAyNi4yNzM0MzctNS41NTg1OTQgOS43ODUxNTctMTAuMDU4NTk0IDE5Ljk5MjE4OC0xMy4zNzEwOTQgMzAuMzM5ODQ0LTMuMTk5MjE5IDEwLjAwMzkwNi01Ljg3NSAyMC45NDUzMTMtNy45NTMxMjUgMzIuNTIzNDM3LTIuMDYyNSAxMS40NzY1NjMtMy40NTcwMzEgMjIuMzYzMjgyLTQuMTQ4NDM3IDMyLjM2MzI4Mi0uNjc5Njg4IDkuNzc3MzQ0LTEuMDIzNDM4IDE5Ljk1MzEyNS0xLjAyMzQzOCAzMC4yMzQzNzUgMCAyNi43MjY1NjIgOC40OTYwOTQgNDguMzYzMjgxIDI1LjI1IDY0LjMyMDMxMiAxNi41NDY4NzUgMTUuNzQ2MDk0IDM4LjQzNzUgMjMuNzMwNDY5IDY1LjA2NjQwNiAyMy43MzA0NjloMjQ2LjUzMTI1YzI2LjYyMTA5NCAwIDQ4LjUxMTcxOS03Ljk4NDM3NSA2NS4wNjI1LTIzLjczMDQ2OSAxNi43NTc4MTMtMTUuOTQ1MzEyIDI1LjI1MzkwNi0zNy41ODk4NDMgMjUuMjUzOTA2LTY0LjMyNDIxOS0uMDAzOTA2LTEwLjMxNjQwNi0uMzUxNTYyLTIwLjQ5MjE4Ny0xLjAzNTE1Ni0zMC4yNDIxODd6bS00NC45MDYyNSA3Mi44MjgxMjVjLTEwLjkzMzU5NCAxMC40MDYyNS0yNS40NDkyMTggMTUuNDY0ODQ0LTQ0LjM3ODkwNiAxNS40NjQ4NDRoLTI0Ni41MjczNDRjLTE4LjkzMzU5NCAwLTMzLjQ0OTIxOC01LjA1ODU5NC00NC4zNzg5MDYtMTUuNDYwOTM4LTEwLjcyMjY1Ni0xMC4yMDcwMzEtMTUuOTMzNTk0LTI0LjE0MDYyNS0xNS45MzM1OTQtNDIuNTg1OTM3IDAtOS41OTM3NS4zMTY0MDYtMTkuMDY2NDA3Ljk0OTIxOS0yOC4xNjAxNTcuNjE3MTg3LTguOTIxODc0IDEuODc4OTA2LTE4LjcyMjY1NiAzLjc1LTI5LjEzNjcxOCAxLjg0NzY1Ni0xMC4yODUxNTYgNC4xOTkyMTktMTkuOTM3NSA2Ljk5NjA5NC0yOC42NzU3ODIgMi42ODM1OTMtOC4zNzg5MDYgNi4zNDM3NS0xNi42NzU3ODEgMTAuODgyODEyLTI0LjY2Nzk2OCA0LjMzMjAzMS03LjYxNzE4OCA5LjMxNjQwNy0xNC4xNTIzNDQgMTQuODE2NDA3LTE5LjQxNzk2OSA1LjE0NDUzMS00LjkyNTc4MSAxMS42Mjg5MDYtOC45NTcwMzEgMTkuMjY5NTMxLTExLjk4MDQ2OSA3LjA2NjQwNi0yLjc5Njg3NSAxNS4wMDc4MTItNC4zMjgxMjUgMjMuNjI4OTA2LTQuNTU4NTk0IDEuMDUwNzgxLjU1ODU5NCAyLjkyMTg3NSAxLjYyNSA1Ljk1MzEyNSAzLjYwMTU2MyA2LjE2Nzk2OSA0LjAxOTUzMSAxMy4yNzczNDQgOC42MDU0NjkgMjEuMTM2NzE5IDEzLjYyNSA4Ljg1OTM3NSA1LjY0ODQzNyAyMC4yNzM0MzcgMTAuNzUgMzMuOTEwMTU2IDE1LjE1MjM0NCAxMy45NDE0MDYgNC41MDc4MTIgMjguMTYwMTU2IDYuNzk2ODc1IDQyLjI3MzQzNyA2Ljc5Njg3NSAxNC4xMTMyODIgMCAyOC4zMzU5MzgtMi4yODkwNjMgNDIuMjY5NTMyLTYuNzkyOTY5IDEzLjY0ODQzNy00LjQxMDE1NiAyNS4wNTg1OTQtOS41MDc4MTMgMzMuOTI5Njg3LTE1LjE2NDA2MyA4LjA0Mjk2OS01LjE0MDYyNCAxNC45NTMxMjUtOS41OTM3NSAyMS4xMjEwOTQtMTMuNjE3MTg3IDMuMDMxMjUtMS45NzI2NTYgNC45MDIzNDQtMy4wNDI5NjkgNS45NTMxMjUtMy42MDE1NjMgOC42MjUuMjMwNDY5IDE2LjU2NjQwNiAxLjc2MTcxOSAyMy42MzY3MTkgNC41NTg1OTQgNy42MzY3MTkgMy4wMjM0MzggMTQuMTIxMDkzIDcuMDU4NTk0IDE5LjI2NTYyNSAxMS45ODA0NjkgNS41IDUuMjYxNzE5IDEwLjQ4NDM3NSAxMS43OTY4NzUgMTQuODE2NDA2IDE5LjQyMTg3NSA0LjU0Mjk2OSA3Ljk4ODI4MSA4LjIwNzAzMSAxNi4yODkwNjIgMTAuODg2NzE5IDI0LjY2MDE1NiAyLjgwMDc4MSA4Ljc1IDUuMTU2MjUgMTguMzk4NDM4IDcgMjguNjc1NzgyIDEuODY3MTg3IDEwLjQzMzU5MyAzLjEzMjgxMiAyMC4yMzgyODEgMy43NSAyOS4xNDQ1MzF2LjAwNzgxMmMuNjM2NzE5IDkuMDU4NTk0Ljk1NzAzMSAxOC41MjczNDQuOTYwOTM3IDI4LjE0ODQzOC0uMDAzOTA2IDE4LjQ0OTIxOS01LjIxNDg0NCAzMi4zNzg5MDYtMTUuOTM3NSA0Mi41ODIwMzF6bTAgMCIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4=" /></button>
+        </header>
+        <section>
+            <header id="kd4-hd">
+                <div id="kd4-hd-box">
+                    <h1 id="head-title">쓰레기 처리</h1>
+                    <p id="head-sub-title">쓰레기를 대신 처리해 드립니다</p>
+                </div>
+            </header>
+            <article id="kd4-at">
+                <div>
+                    <h2 id="article-sub-title">대충 이러쿵 저러쿵</h2>
+                </div>
+                <div id="graid">
+                    <div id="imgbox">
+                        <div class="box">
+
+                        </div>
+                        <div class="box">
+
+                        </div>
+                        <div class="box">
+
+                        </div>
+                        <div class="box">
+
+                        </div>
+                        <div class="box">
+
+                        </div>
+                        <div class="box">
+
+                        </div>
+                        <div class="box">
+
+                        </div>
+                        <div class="box">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="plus">
+                    <a id="plus-button"><i></i>+더보기</a>
+                </div>
+            </article>
+
+        </section>
+        <footer id="kd4-footer">
+            <a id="kd4-footer-title"style="display: block;">ccheongso</a>
+            <div id="kd4-footer-button">
+                <div><a class="search">광고</a></div>
+                <div><a class="search">문의</a></div>
+                <div><a class="search">개인정보의처리방침</a></div>
+            </div>   
+        </footer>
+    </div>
+</body>
+
+</html>

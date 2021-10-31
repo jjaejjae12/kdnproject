@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c679a6b0d3.js" crossorigin="anonymous"></script>
+
+    <style>
+        /*font*/
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+
+        /*메인 화면 설정*/
+        #back {
+            
+            background-image: url(../kda/이미지/배경.png);
+            background-blend-mode: luminosity;
+            min-height: 150vh;
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+        /*head+nav*/
+        #head {
+
+            padding-bottom: 18px;
+            display: flex;
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            
+        }
+
+
+        /*logo*/
+        #logo {
+            margin-top: 2px;
+            margin-left: 223px;
+            font-family: 'Sacramento', cursive;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            color: rgba(173, 0, 255, 1);
+        }
+        /*검색창*/
+        .searchbox {
+            margin-left: 36px;
+            margin-top: 15px;
+            height: 40px;
+            width: 450px;
+            border: 0.5px solid #989898;
+            background: #ffffffff;
+            border-radius: 4px;
+
+
+
+        }
+        /*검색박스*/
+        #search:-ms-input-placeholder {
+
+            color: rgba(196, 196, 196, 1);
+        }
+
+        #search {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin-left: 18px;
+            font-size: 16px;
+            width: 325px;
+            padding: 8px;
+            border: 0px;
+            outline: none;
+            float: left;
+        }
+        /*검색 클릭버튼*/
+        #searchbutton {
+
+            width: 38px;
+            height: 100%;
+            border: 0px;
+            background-color: rgba(209, 151, 255, 1);
+            outline: none;
+            float: right;
+            color: #ffffffff;
+
+        }
+        /*검색 클릭버튼 아이콘*/
+        #searchicon{
+            width: 15px;
+        }
+        /*회원가입*/
+        #member {
+            margin-top: 15px;
+            margin-left: 370px;
+            position: relative;
+            border: 0px;
+            outline: none;
+            background-color: white;
+        }
+        #member:hover{
+            border-bottom: 2px solid black;
+            border-radius: 50px;
+        }
+        /*회원가입 버큰 아이콘 이미지*/
+        #joinimg{
+            width: 30px;
+        }
+
+        /*login*/
+
+        /*로그인 박스*/
+        .loginbox {
+            margin-top:180px;
+            margin-left: 470px;
+            margin-right: 470px;
+            padding: 60px;
+
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(0, 0, 0, 0.4);
+            box-sizing: border-box;
+            border-radius: 30px;
+        }
+        /*로그인 로고*/
+        #loginlogo{
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Sacramento', cursive;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 64px;
+            color: rgba(173, 0, 255, 1);
+
+        }
+        /*제목*/
+        #title{
+            text-align: center;
+            font-size: 18px;
+            margin-top: 100px;
+        }
+        /*설명란*/
+        #loginExplanation{
+            text-align: center;
+            font-family: 12px;
+            color: #606060;
+            margin-top: 50px;
+        }
+        /*카카오 로그인 폼*/
+        #kakao{
+            margin-top: 20px;
+            margin-left: 50px;
+            padding: 16px;
+            padding-left: 12px;
+            padding-right: 92px;
+            
+            outline: none;
+            border: 0px solid rgba(254, 229, 0, 1);
+            border-radius: 3px;
+            background-color: rgba(254, 229, 0, 1);
+            font-size: 14px;  
+        }
+        /*구글 로그인 폼*/
+        #google{
+            margin-top: 20px;
+            margin-left: 50px;
+
+            margin-bottom: 172px;
+            padding: 16px;
+            padding-left: 12px;
+            padding-right: 90px;
+            font-size: 14px;
+          
+
+            outline: none;
+            border: 0px solid #FFFFFF;;
+            border-radius: 3px;
+            background-color: #FFFFFF;;
+        }
+        
+        /*카카오 로그인 아이콘 이미지*/
+        #kakaoimg{
+            width: 16px;
+            margin-left: 8px;
+            margin-right: 60px;
+        }
+
+        /*구글 로그인 아이콘 이미지*/
+        #googleimg{
+            width: 16px;
+            margin-left: 8px;
+            margin-right: 60px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="back">
+        <header id="head">
+            <h1 id="logo">ccheongso</h1>
+            <div class="searchbox">
+                <input type="text" placeholder="검색해라!" id="search">
+                <button id="searchbutton"><img id="searchicon"src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMDUgNTEyLjAwNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNTA1Ljc0OSw0NzUuNTg3bC0xNDUuNi0xNDUuNmMyOC4yMDMtMzQuODM3LDQ1LjE4NC03OS4xMDQsNDUuMTg0LTEyNy4zMTdjMC0xMTEuNzQ0LTkwLjkyMy0yMDIuNjY3LTIwMi42NjctMjAyLjY2NyAgICBTMCw5MC45MjUsMCwyMDIuNjY5czkwLjkyMywyMDIuNjY3LDIwMi42NjcsMjAyLjY2N2M0OC4yMTMsMCw5Mi40OC0xNi45ODEsMTI3LjMxNy00NS4xODRsMTQ1LjYsMTQ1LjYgICAgYzQuMTYsNC4xNiw5LjYyMSw2LjI1MSwxNS4wODMsNi4yNTFzMTAuOTIzLTIuMDkxLDE1LjA4My02LjI1MUM1MTQuMDkxLDQ5Ny40MTEsNTE0LjA5MSw0ODMuOTI4LDUwNS43NDksNDc1LjU4N3ogICAgIE0yMDIuNjY3LDM2Mi42NjljLTg4LjIzNSwwLTE2MC03MS43NjUtMTYwLTE2MHM3MS43NjUtMTYwLDE2MC0xNjBzMTYwLDcxLjc2NSwxNjAsMTYwUzI5MC45MDEsMzYyLjY2OSwyMDIuNjY3LDM2Mi42Njl6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" /></button>
+            </div>
+            <button id="member"><img id="joinimg"src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDQ1LjAwMDAwMDAwMDAwMDAzLDApIj48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0yMTAuMzUxNTYyIDI0Ni42MzI4MTJjMzMuODgyODEzIDAgNjMuMjE4NzUtMTIuMTUyMzQzIDg3LjE5NTMxMy0zNi4xMjg5MDYgMjMuOTY4NzUtMjMuOTcyNjU2IDM2LjEyNS01My4zMDQ2ODcgMzYuMTI1LTg3LjE5MTQwNiAwLTMzLjg3NS0xMi4xNTIzNDQtNjMuMjEwOTM4LTM2LjEyODkwNi04Ny4xOTE0MDYtMjMuOTc2NTYzLTIzLjk2ODc1LTUzLjMxMjUtMzYuMTIxMDk0LTg3LjE5MTQwNy0zNi4xMjEwOTQtMzMuODg2NzE4IDAtNjMuMjE4NzUgMTIuMTUyMzQ0LTg3LjE5MTQwNiAzNi4xMjVzLTM2LjEyODkwNiA1My4zMDg1OTQtMzYuMTI4OTA2IDg3LjE4NzVjMCAzMy44ODY3MTkgMTIuMTU2MjUgNjMuMjIyNjU2IDM2LjEyODkwNiA4Ny4xOTUzMTIgMjMuOTgwNDY5IDIzLjk2ODc1IDUzLjMxNjQwNiAzNi4xMjUgODcuMTkxNDA2IDM2LjEyNXptLTY1Ljk3MjY1Ni0xODkuMjkyOTY4YzE4LjM5NDUzMi0xOC4zOTQ1MzIgMzkuOTcyNjU2LTI3LjMzNTkzOCA2NS45NzI2NTYtMjcuMzM1OTM4IDI1Ljk5NjA5NCAwIDQ3LjU3ODEyNiA4Ljk0MTQwNiA2NS45NzY1NjMgMjcuMzM1OTM4IDE4LjM5NDUzMSAxOC4zOTg0MzcgMjcuMzM5ODQ0IDM5Ljk4MDQ2OCAyNy4zMzk4NDQgNjUuOTcyNjU2IDAgMjYtOC45NDUzMTMgNDcuNTc4MTI1LTI3LjMzOTg0NCA2NS45NzY1NjItMTguMzk4NDM3IDE4LjM5ODQzOC0zOS45ODA0NjkgMjcuMzM5ODQ0LTY1Ljk3NjU2MyAyNy4zMzk4NDQtMjUuOTkyMTg3IDAtNDcuNTcwMzEyLTguOTQ1MzEyLTY1Ljk3MjY1Ni0yNy4zMzk4NDQtMTguMzk4NDM3LTE4LjM5NDUzMS0yNy4zNDM3NS0zOS45NzY1NjItMjcuMzQzNzUtNjUuOTc2NTYyIDAtMjUuOTkyMTg4IDguOTQ1MzEzLTQ3LjU3NDIxOSAyNy4zNDM3NS02NS45NzI2NTZ6bTAgMCIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTQyNi4xMjg5MDYgMzkzLjcwMzEyNWMtLjY5MTQwNi05Ljk3NjU2My0yLjA4OTg0NC0yMC44NTkzNzUtNC4xNDg0MzctMzIuMzUxNTYzLTIuMDc4MTI1LTExLjU3ODEyNC00Ljc1MzkwNy0yMi41MjM0MzctNy45NTcwMzEtMzIuNTI3MzQzLTMuMzEyNS0xMC4zMzk4NDQtNy44MDg1OTQtMjAuNTUwNzgxLTEzLjM3NS0zMC4zMzU5MzgtNS43Njk1MzItMTAuMTU2MjUtMTIuNTUwNzgyLTE5LTIwLjE2MDE1Ny0yNi4yNzczNDMtNy45NTcwMzEtNy42MTMyODItMTcuNjk5MjE5LTEzLjczNDM3Ni0yOC45NjQ4NDMtMTguMTk5MjE5LTExLjIyNjU2My00LjQ0MTQwNy0yMy42Njc5NjktNi42OTE0MDctMzYuOTc2NTYzLTYuNjkxNDA3LTUuMjI2NTYzIDAtMTAuMjgxMjUgMi4xNDQ1MzItMjAuMDQyOTY5IDguNS02LjAwNzgxMiAzLjkxNzk2OS0xMy4wMzUxNTYgOC40NDkyMTktMjAuODc4OTA2IDEzLjQ2MDkzOC02LjcwNzAzMSA0LjI3MzQzOC0xNS43OTI5NjkgOC4yNzczNDQtMjcuMDE1NjI1IDExLjkwMjM0NC0xMC45NDkyMTkgMy41NDI5NjgtMjIuMDY2NDA2IDUuMzM5ODQ0LTMzLjA0Mjk2OSA1LjMzOTg0NC0xMC45Njg3NSAwLTIyLjA4NTkzNy0xLjc5Njg3Ni0zMy4wNDI5NjgtNS4zMzk4NDQtMTEuMjEwOTM4LTMuNjIxMDk0LTIwLjMwMDc4Mi03LjYyNS0yNi45OTYwOTQtMTEuODk4NDM4LTcuNzY5NTMyLTQuOTY0ODQ0LTE0LjgwMDc4Mi05LjQ5NjA5NC0yMC44OTg0MzgtMTMuNDY4NzUtOS43NTM5MDYtNi4zNTU0NjgtMTQuODA4NTk0LTguNS0yMC4wMzUxNTYtOC41LTEzLjMxMjUgMC0yNS43NSAyLjI1MzkwNi0zNi45NzI2NTYgNi42OTkyMTktMTEuMjU3ODEzIDQuNDU3MDMxLTIxLjAwMzkwNiAxMC41NzgxMjUtMjguOTY4NzUgMTguMTk5MjE5LTcuNjA5Mzc1IDcuMjgxMjUtMTQuMzkwNjI1IDE2LjEyMTA5NC0yMC4xNTYyNSAyNi4yNzM0MzctNS41NTg1OTQgOS43ODUxNTctMTAuMDU4NTk0IDE5Ljk5MjE4OC0xMy4zNzEwOTQgMzAuMzM5ODQ0LTMuMTk5MjE5IDEwLjAwMzkwNi01Ljg3NSAyMC45NDUzMTMtNy45NTMxMjUgMzIuNTIzNDM3LTIuMDYyNSAxMS40NzY1NjMtMy40NTcwMzEgMjIuMzYzMjgyLTQuMTQ4NDM3IDMyLjM2MzI4Mi0uNjc5Njg4IDkuNzc3MzQ0LTEuMDIzNDM4IDE5Ljk1MzEyNS0xLjAyMzQzOCAzMC4yMzQzNzUgMCAyNi43MjY1NjIgOC40OTYwOTQgNDguMzYzMjgxIDI1LjI1IDY0LjMyMDMxMiAxNi41NDY4NzUgMTUuNzQ2MDk0IDM4LjQzNzUgMjMuNzMwNDY5IDY1LjA2NjQwNiAyMy43MzA0NjloMjQ2LjUzMTI1YzI2LjYyMTA5NCAwIDQ4LjUxMTcxOS03Ljk4NDM3NSA2NS4wNjI1LTIzLjczMDQ2OSAxNi43NTc4MTMtMTUuOTQ1MzEyIDI1LjI1MzkwNi0zNy41ODk4NDMgMjUuMjUzOTA2LTY0LjMyNDIxOS0uMDAzOTA2LTEwLjMxNjQwNi0uMzUxNTYyLTIwLjQ5MjE4Ny0xLjAzNTE1Ni0zMC4yNDIxODd6bS00NC45MDYyNSA3Mi44MjgxMjVjLTEwLjkzMzU5NCAxMC40MDYyNS0yNS40NDkyMTggMTUuNDY0ODQ0LTQ0LjM3ODkwNiAxNS40NjQ4NDRoLTI0Ni41MjczNDRjLTE4LjkzMzU5NCAwLTMzLjQ0OTIxOC01LjA1ODU5NC00NC4zNzg5MDYtMTUuNDYwOTM4LTEwLjcyMjY1Ni0xMC4yMDcwMzEtMTUuOTMzNTk0LTI0LjE0MDYyNS0xNS45MzM1OTQtNDIuNTg1OTM3IDAtOS41OTM3NS4zMTY0MDYtMTkuMDY2NDA3Ljk0OTIxOS0yOC4xNjAxNTcuNjE3MTg3LTguOTIxODc0IDEuODc4OTA2LTE4LjcyMjY1NiAzLjc1LTI5LjEzNjcxOCAxLjg0NzY1Ni0xMC4yODUxNTYgNC4xOTkyMTktMTkuOTM3NSA2Ljk5NjA5NC0yOC42NzU3ODIgMi42ODM1OTMtOC4zNzg5MDYgNi4zNDM3NS0xNi42NzU3ODEgMTAuODgyODEyLTI0LjY2Nzk2OCA0LjMzMjAzMS03LjYxNzE4OCA5LjMxNjQwNy0xNC4xNTIzNDQgMTQuODE2NDA3LTE5LjQxNzk2OSA1LjE0NDUzMS00LjkyNTc4MSAxMS42Mjg5MDYtOC45NTcwMzEgMTkuMjY5NTMxLTExLjk4MDQ2OSA3LjA2NjQwNi0yLjc5Njg3NSAxNS4wMDc4MTItNC4zMjgxMjUgMjMuNjI4OTA2LTQuNTU4NTk0IDEuMDUwNzgxLjU1ODU5NCAyLjkyMTg3NSAxLjYyNSA1Ljk1MzEyNSAzLjYwMTU2MyA2LjE2Nzk2OSA0LjAxOTUzMSAxMy4yNzczNDQgOC42MDU0NjkgMjEuMTM2NzE5IDEzLjYyNSA4Ljg1OTM3NSA1LjY0ODQzNyAyMC4yNzM0MzcgMTAuNzUgMzMuOTEwMTU2IDE1LjE1MjM0NCAxMy45NDE0MDYgNC41MDc4MTIgMjguMTYwMTU2IDYuNzk2ODc1IDQyLjI3MzQzNyA2Ljc5Njg3NSAxNC4xMTMyODIgMCAyOC4zMzU5MzgtMi4yODkwNjMgNDIuMjY5NTMyLTYuNzkyOTY5IDEzLjY0ODQzNy00LjQxMDE1NiAyNS4wNTg1OTQtOS41MDc4MTMgMzMuOTI5Njg3LTE1LjE2NDA2MyA4LjA0Mjk2OS01LjE0MDYyNCAxNC45NTMxMjUtOS41OTM3NSAyMS4xMjEwOTQtMTMuNjE3MTg3IDMuMDMxMjUtMS45NzI2NTYgNC45MDIzNDQtMy4wNDI5NjkgNS45NTMxMjUtMy42MDE1NjMgOC42MjUuMjMwNDY5IDE2LjU2NjQwNiAxLjc2MTcxOSAyMy42MzY3MTkgNC41NTg1OTQgNy42MzY3MTkgMy4wMjM0MzggMTQuMTIxMDkzIDcuMDU4NTk0IDE5LjI2NTYyNSAxMS45ODA0NjkgNS41IDUuMjYxNzE5IDEwLjQ4NDM3NSAxMS43OTY4NzUgMTQuODE2NDA2IDE5LjQyMTg3NSA0LjU0Mjk2OSA3Ljk4ODI4MSA4LjIwNzAzMSAxNi4yODkwNjIgMTAuODg2NzE5IDI0LjY2MDE1NiAyLjgwMDc4MSA4Ljc1IDUuMTU2MjUgMTguMzk4NDM4IDcgMjguNjc1NzgyIDEuODY3MTg3IDEwLjQzMzU5MyAzLjEzMjgxMiAyMC4yMzgyODEgMy43NSAyOS4xNDQ1MzF2LjAwNzgxMmMuNjM2NzE5IDkuMDU4NTk0Ljk1NzAzMSAxOC41MjczNDQuOTYwOTM3IDI4LjE0ODQzOC0uMDAzOTA2IDE4LjQ0OTIxOS01LjIxNDg0NCAzMi4zNzg5MDYtMTUuOTM3NSA0Mi41ODIwMzF6bTAgMCIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4=" /></button>
+        </header>
+        <main id="main">
+
+            <div class="loginbox">
+                <h2 id="loginlogo">ccheongso</h2>
+                <h3 id="title">간편 로그인</h3>
+                <p id="loginExplanation">다음 사이트의 아이디로 간편하게 로그인 하실 수 있습니다.</p>
+                <button id="kakao"><img id="kakaoimg"src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0xMiAuNWMtNi4zNTEgMC0xMS41IDQuMzk5LTExLjUgOS44MjYgMCAzLjUwOCAyLjE1MiA2LjU4NyA1LjM5IDguMzI1LS4xNzYuNjU4LTEuMTMyIDQuMjM1LTEuMTcgNC41MTYgMCAwLS4wMjMuMjExLjEwMy4yOTJzLjI3NS4wMTguMjc1LjAxOGMuMzYyLS4wNTUgNC4xOTYtMi45NzMgNC44NTktMy40OC42NjMuMTAyIDEuMzQ1LjE1NSAyLjA0My4xNTUgNi4zNTEgMCAxMS41LTQuMzk5IDExLjUtOS44MjYgMC01LjQyNy01LjE0OS05LjgyNi0xMS41LTkuODI2eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzNlMjcyMyIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTEyIDBjLTYuNjY3IDAtMTAuNjg2IDQuMTEtMTEuNzA5IDguMTgzLTEuMDYyIDQuMjI0Ljc5MyA4LjI3MSA0Ljg1NSAxMC42ODktLjkwMyAzLjI3Ni0xLjQ1IDQuMzc2LS41ODcgNC45NjUuOTY4LjY2MiAyLjM2Mi0uNzA3IDQuNjkxLTIuNDk0bC45NTctLjczM2MzLjc0OS40ODYgNy41NjgtLjU5MyAxMC4yNzItMi45MTMgMi4yNy0xLjk0OCAzLjUyLTQuNTUzIDMuNTItNy4zMzQuMDAxLTUuNzE1LTUuMzgyLTEwLjM2My0xMS45OTktMTAuMzYzem03LjUwNCAxNi41NThjLTIuNDU0IDIuMTA2LTUuOTY1IDMuMDQ5LTkuMzg4IDIuNTI0LS40NzktLjA3Ny0yLjU5MiAxLjc3My00LjMxMiAyLjk3MS4xOTQtLjczNS41NzQtMS45NzIuOTQzLTMuMzUzLjA5LS4zMzYtLjA2My0uNjktLjM3LS44NTQtNC41MjctMi40MzEtNS4zNjItNi4zOTYtNC42MzMtOS4yOTcuODg0LTMuNTA4IDQuMzk3LTcuMDQ5IDEwLjI1Ni03LjA0OSA1Ljc5IDAgMTAuNSAzLjk3NiAxMC41IDguODYyIDAgMi4zMzgtMS4wNjQgNC41MzgtMi45OTYgNi4xOTZ6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtNi41IDcuNzVoLTNjLS45OTIgMC0uOTkzIDEuNSAwIDEuNWguNzV2NC4yNWMwIC45OTIgMS41Ljk5MyAxLjUgMHYtNC4yNWguNzVjLjk5MiAwIC45OTMtMS41IDAtMS41eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTEwLjE5NiA4LjIyMmMtLjAwMS0uMDAzLS4wMDQtLjAwNC0uMDA1LS4wMDctLjI0Ni0uNTk1LTEuMTI2LS42MjMtMS4zODMgMC0uMDAxLjAwMi0uMDAzLjAwNC0uMDA0LjAwN2wtMiA1Yy0uMTU0LjM4NC4wMzMuODIxLjQxOC45NzUuOTU4LjM4NiAxLjEyOS0uOTcxIDEuMzg2LTEuNDQ2aDEuNzg1bC40MTEgMS4wMjhjLjM2Ny45MiAxLjc2NC4zNjcgMS4zOTMtLjU1N3ptLS45ODggMy4wMjguMjkyLS43MzEuMjkyLjczMXoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0xNS41IDEyLjc1aC0xLjI1di00LjI1YzAtLjk5Mi0xLjUtLjk5My0xLjUgMHY1YzAgLjQxNC4zMzYuNzUuNzUuNzVoMmMuOTkyIDAgLjk5My0xLjUgMC0xLjV6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMTguMjUgOS42ODl2LTEuMTg5YzAtLjk5Mi0xLjUtLjk5My0xLjUgMHY1YzAgLjk5MiAxLjUuOTkzIDEuNSAwdi0xLjQ2OWMxLjYwNSAxLjc0NiAxLjY1NyAyLjIxOSAyLjI1IDIuMjE5LjYzIDAgLjk5MS0uNzQ3LjU2OS0xLjIzOWwtMS44NTctMi4xNjMgMS44MjMtMS44MjNjLjAwMi0uMDAzLjAwNS0uMDA1LjAwNy0uMDA4LjAwMS0uMDAxLjAwMi0uMDAyLjAwMy0uMDAzLjY4MS0uNzA2LS4zNzMtMS43NDctMS4wNy0xLjA1eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4=" />카카오 계정으로 로그인</button><br>
+                <button id="google"><img id="googleimg"src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPgo8cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSIiIGQ9Ik00OTIuNjY4LDIxMS40ODlsLTIwOC44NC0wLjAxYy05LjIyMiwwLTE2LjY5Nyw3LjQ3NC0xNi42OTcsMTYuNjk2djY2LjcxNSAgYzAsOS4yMiw3LjQ3NSwxNi42OTYsMTYuNjk2LDE2LjY5NmgxMTcuNjA2Yy0xMi44NzgsMzMuNDIxLTM2LjkxNCw2MS40MS02Ny41OCw3OS4xOTRMMzg0LDQ3Ny41ODkgIGM4MC40NDItNDYuNTIzLDEyOC0xMjguMTUyLDEyOC0yMTkuNTNjMC0xMy4wMTEtMC45NTktMjIuMzEyLTIuODc3LTMyLjc4NUM1MDcuNjY1LDIxNy4zMTcsNTAwLjc1NywyMTEuNDg5LDQ5Mi42NjgsMjExLjQ4OXoiIGZpbGw9IiMxNjdlZTYiIGRhdGEtb3JpZ2luYWw9IiMxNjdlZTYiPjwvcGF0aD4KPHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iIiBkPSJNMjU2LDQxMS44MjZjLTU3LjU1NCwwLTEwNy43OTgtMzEuNDQ2LTEzNC43ODMtNzcuOTc5bC04Ni44MDYsNTAuMDM0ICBDNzguNTg2LDQ2MC40NDMsMTYxLjM0LDUxMiwyNTYsNTEyYzQ2LjQzNywwLDkwLjI1NC0xMi41MDMsMTI4LTM0LjI5MnYtMC4xMTlsLTUwLjE0Ny04Ni44MSAgQzMxMC45MTUsNDA0LjA4MywyODQuMzcxLDQxMS44MjYsMjU2LDQxMS44MjZ6IiBmaWxsPSIjMTJiMzQ3IiBkYXRhLW9yaWdpbmFsPSIjMTJiMzQ3Ij48L3BhdGg+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9IiIgZD0iTTM4NCw0NzcuNzA4di0wLjExOWwtNTAuMTQ3LTg2LjgxYy0yMi45MzgsMTMuMzAzLTQ5LjQ4LDIxLjA0Ny03Ny44NTMsMjEuMDQ3VjUxMiAgQzMwMi40MzcsNTEyLDM0Ni4yNTYsNDk5LjQ5NywzODQsNDc3LjcwOHoiIGZpbGw9IiMwZjk5M2UiIGRhdGEtb3JpZ2luYWw9IiMwZjk5M2UiPjwvcGF0aD4KPHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iIiBkPSJNMTAwLjE3NCwyNTZjMC0yOC4zNjksNy43NDItNTQuOTEsMjEuMDQzLTc3Ljg0N2wtODYuODA2LTUwLjAzNEMxMi41MDIsMTY1Ljc0NiwwLDIwOS40NDQsMCwyNTYgIHMxMi41MDIsOTAuMjU0LDM0LjQxMSwxMjcuODgxbDg2LjgwNi01MC4wMzRDMTA3LjkxNiwzMTAuOTEsMTAwLjE3NCwyODQuMzY5LDEwMC4xNzQsMjU2eiIgZmlsbD0iI2ZmZDUwMCIgZGF0YS1vcmlnaW5hbD0iI2ZmZDUwMCI+PC9wYXRoPgo8cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSIiIGQ9Ik0yNTYsMTAwLjE3NGMzNy41MzEsMCw3Mi4wMDUsMTMuMzM2LDk4LjkzMiwzNS41MTljNi42NDMsNS40NzIsMTYuMjk4LDUuMDc3LDIyLjM4My0xLjAwOCAgbDQ3LjI3LTQ3LjI3YzYuOTA0LTYuOTA0LDYuNDEyLTE4LjIwNS0wLjk2My0yNC42MDNDMzc4LjUwNywyMy42NzMsMzE5LjgwNywwLDI1NiwwQzE2MS4zNCwwLDc4LjU4Niw1MS41NTcsMzQuNDExLDEyOC4xMTkgIGw4Ni44MDYsNTAuMDM0QzE0OC4yMDIsMTMxLjYyLDE5OC40NDYsMTAwLjE3NCwyNTYsMTAwLjE3NHoiIGZpbGw9IiNmZjRiMjYiIGRhdGEtb3JpZ2luYWw9IiNmZjRiMjYiPjwvcGF0aD4KPHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iIiBkPSJNMzU0LjkzMiwxMzUuNjkzYzYuNjQzLDUuNDcyLDE2LjI5OSw1LjA3NywyMi4zODMtMS4wMDhsNDcuMjctNDcuMjcgIGM2LjkwMy02LjkwNCw2LjQxMS0xOC4yMDUtMC45NjMtMjQuNjAzQzM3OC41MDcsMjMuNjcyLDMxOS44MDcsMCwyNTYsMHYxMDAuMTc0QzI5My41MywxMDAuMTc0LDMyOC4wMDUsMTEzLjUxLDM1NC45MzIsMTM1LjY5M3oiIGZpbGw9IiNkOTNmMjEiIGRhdGEtb3JpZ2luYWw9IiNkOTNmMjEiPjwvcGF0aD4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" />Google 계정으로 로그인</button>
+
+            </div>
+        </main>
+    </div>
+    
+</body>
+
+</html>
